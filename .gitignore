@@ -1,0 +1,9 @@
+build
+.swp
+*.iml
+*.ipw
+*.iws
+.classpath
+.project
+.gradle
+*.ipr
