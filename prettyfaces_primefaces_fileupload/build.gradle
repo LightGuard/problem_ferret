@@ -1,0 +1,23 @@
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+  mavenRepo(urls: 'https://repository.jboss.org/nexus/content/groups/public/')
+  mavenRepo(urls: 'http://ocpsoft.com/repository/')
+  mavenRepo(urls: 'http://repository.prime.com.tr')
+}
+dependencies {
+  providedCompile 'javax.faces:jsf-api:2.0.2-FCS',
+                  'javax.enterprise:cdi-api:1.0-SP1'
+
+  compile 'org.primefaces:primefaces:2.2.M1'
+
+  runtime 'com.ocpsoft:prettyfaces-jsf2:3.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '0.9-rc-1'
+    jarPath = 'wrapper-libs'
+}
+
