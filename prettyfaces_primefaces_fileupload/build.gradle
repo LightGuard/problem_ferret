@@ -3,6 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 repositories {
+  mavenCentral()
   mavenRepo(urls: 'https://repository.jboss.org/nexus/content/groups/public/')
   mavenRepo(urls: 'http://ocpsoft.com/repository/')
   mavenRepo(urls: 'http://repository.prime.com.tr')
@@ -13,7 +14,9 @@ dependencies {
 
   compile 'org.primefaces:primefaces:2.2.M1'
 
-  runtime 'com.ocpsoft:prettyfaces-jsf2:3.1.0'
+  runtime 'com.ocpsoft:prettyfaces-jsf2:3.1.0',
+          'commons-io:commons-io:1.4',
+          'commons-fileupload:commons-fileupload:1.2.1'
 }
 
 task wrapper(type: Wrapper) {
