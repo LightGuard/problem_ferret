@@ -5,7 +5,7 @@
 
   <rewrite match="^/.+$" trailingSlash="remove" toCase="lowercase" />
 
-  <url-mapping id="create">
+  <url-mapping id="upload">
     <pattern value="/" />
     <view-id>/faces/index.xhtml</view-id>
   </url-mapping>
