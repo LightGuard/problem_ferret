@@ -1,0 +1,24 @@
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+  mavenCentral()
+  mavenRepo(urls: 'https://repository.jboss.org/nexus/content/groups/public/')
+}
+dependencies {
+  providedCompile 'javax.faces:jsf-api:2.0.2-FCS'
+
+  providedRuntime 'javax.faces:jsf-impl:2.0.2-FCS'
+}
+
+task exploded(type: Copy, description: 'Create an exploded war') {
+    into "$buildDir/exploded"
+    with war
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '0.9-rc-1'
+    jarPath = 'wrapper-libs'
+}
+
