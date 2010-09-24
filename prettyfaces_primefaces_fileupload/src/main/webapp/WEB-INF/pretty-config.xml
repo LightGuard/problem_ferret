@@ -3,11 +3,19 @@
   xsi:schemaLocation="http://ocpsoft.com/prettyfaces/2.0.4
   http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-2.0.4.xsd">
 
-  <rewrite match="^/.+$" trailingSlash="remove" toCase="lowercase" />
+  <!--<rewrite match="(?i)^(.*);jsessionid=\w+(.*)" substitute="$1$2" redirect="chain" />-->
 
-  <url-mapping id="upload">
-    <pattern value="/" />
-    <view-id>/faces/index.xhtml</view-id>
-  </url-mapping>
+  <!--
+     -<url-mapping id="upload">
+     -  <pattern value="/" />
+     -  <view-id>/faces/index.xhtml</view-id>
+     -</url-mapping>
+     -->
+     <url-mapping id="upload">
+       <pattern value="/test" />
+       <view-id>/faces/index.xhtml</view-id>
+     </url-mapping>
+
+
 
 </pretty-config>

@@ -15,7 +15,7 @@
             <p:menu/> <!-- Only here to make file upload work (bug in 2.2.M1) -->
             <p:growl id="growlMessages"/>
             Please upload a file:
-            <p:fileUpload id="upload" auto="true" fileUploadListener="#{fileUploadListener.onFileUpload}"/>
+            <p:fileUpload id="upload" auto="true" fileUploadListener="#{fileUploadListener.onFileUpload}" update="growlMessages"/>
         </h:form>
     </h:body>
 </f:view>
