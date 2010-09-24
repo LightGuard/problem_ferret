@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
     <welcome-file-list>
-        <welcome-file>/faces/index.xhtml</welcome-file>
+        <welcome-file>index.jsf</welcome-file>
     </welcome-file-list>
 
     <context-param>
@@ -14,23 +14,8 @@
     </context-param>
 
     <context-param>
-        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-        <param-value>.xhtml</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
-        <param-value>*.xhtml</param-value>
-    </context-param> 
-
-    <context-param>
         <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
         <param-value>server</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
-        <param-value>true</param-value>
     </context-param>
 
     <servlet>
@@ -40,7 +25,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
 
     <session-config>
