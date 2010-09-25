@@ -1,15 +1,14 @@
-apply plugin: 'war'
+apply plugin: 'jetty'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 repositories {
-  mavenCentral()
-  mavenRepo(urls: 'https://repository.jboss.org/nexus/content/groups/public/')
+  mavenRepo(urls: 'http://download.java.net/maven/2')
 }
 dependencies {
-  providedCompile 'javax.faces:jsf-api:2.0.2-FCS'
+  compile 'com.sun.faces:jsf-api:2.0.3'
 
-  providedRuntime 'javax.faces:jsf-impl:2.0.2-FCS'
+  runtime 'com.sun.faces:jsf-impl:2.0.3'
 }
 
 task exploded(type: Copy, description: 'Create an exploded war') {

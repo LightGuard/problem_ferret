@@ -1,3 +1,5 @@
+#BUG FIXED WITH MOJARRA 2.0.3
+
 ##Purpose
 This shows a problem with Mojarra 2.0.2.FCS and the Flash object when doing JSF redirects.
 
