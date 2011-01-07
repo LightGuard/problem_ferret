@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+configurations {
+  runtime = runtime - compile
+}
+
+dependencies {
+  compile 'javax.annotation:jsr250-api:1.0', 'javax.enterprise:cdi-api:1.0', 'javax.inject:javax.inject:1' 
+}

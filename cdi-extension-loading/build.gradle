@@ -1,0 +1,11 @@
+apply plugin: 'idea'
+
+subprojects {
+  apply plugin: 'idea'
+
+  repositories {
+    mavenRepo(urls: 'https://repository.jboss.org/nexus/content/groups/public/')
+  }
+}
+
+dependsOnChildren()
