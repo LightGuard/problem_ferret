@@ -1,0 +1,1 @@
+javax.enterprise.inject.UnsatisfiedResolutionException: org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService: Can't find a bean for 'class org.lightguard.cdi.extension.bean.HelloService' because no beans implementing that class have been registered with the injection manager InjectManager[web-app:production/webapp/default/cdi-extension-loading].'

@@ -1,0 +1,164 @@
+[#|2011-01-07T00:28:33.384-0700|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app : WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+org.jboss.weld.exceptions.DeploymentException: WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+	at org.jboss.weld.bootstrap.Validator.validateInjectionPoint(Validator.java:309)
+	at org.jboss.weld.bootstrap.Validator.validateBean(Validator.java:139)
+	at org.jboss.weld.bootstrap.Validator.validateRIBean(Validator.java:162)
+	at org.jboss.weld.bootstrap.Validator.validateBeans(Validator.java:385)
+	at org.jboss.weld.bootstrap.Validator.validateDeployment(Validator.java:371)
+	at org.jboss.weld.bootstrap.WeldBootstrap.validateBeans(WeldBootstrap.java:390)
+	at org.glassfish.weld.WeldDeployer.event(WeldDeployer.java:189)
+	at org.glassfish.kernel.event.EventsImpl.send(EventsImpl.java:128)
+	at org.glassfish.internal.data.ApplicationInfo.start(ApplicationInfo.java:298)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:461)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:359)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:369)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1080)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:95)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1260)
+	at org.glassfish.deployment.autodeploy.AutoOperation.run(AutoOperation.java:145)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deploy(AutoDeployer.java:577)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deployAll(AutoDeployer.java:463)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:395)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:380)
+	at org.glassfish.deployment.autodeploy.AutoDeployService$1.run(AutoDeployService.java:213)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+|#]
+
+[#|2011-01-07T00:28:33.404-0700|WARNING|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Autodeploy failed : /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war.|#]
+
+[#|2011-01-07T00:28:33.407-0700|INFO|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Selecting file /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war for autodeployment.|#]
+
+[#|2011-01-07T00:28:33.721-0700|INFO|glassfish3.1|org.hibernate.validator.engine.resolver.DefaultTraversableResolver|_ThreadID=19;_ThreadName=Thread-1;|Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.|#]
+
+[#|2011-01-07T00:28:33.733-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:33.733-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:33.734-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:34.103-0700|INFO|glassfish3.1|javax.enterprise.system.container.web.com.sun.enterprise.web|_ThreadID=60;_ThreadName=Thread-1;|WEB0671: Loading application [cdi-extension-loading] at [/cdi-extension-loading]|#]
+
+[#|2011-01-07T00:28:34.108-0700|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app|#]
+
+[#|2011-01-07T00:28:34.131-0700|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app : WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+org.jboss.weld.exceptions.DeploymentException: WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+	at org.jboss.weld.bootstrap.Validator.validateInjectionPoint(Validator.java:309)
+	at org.jboss.weld.bootstrap.Validator.validateBean(Validator.java:139)
+	at org.jboss.weld.bootstrap.Validator.validateRIBean(Validator.java:162)
+	at org.jboss.weld.bootstrap.Validator.validateBeans(Validator.java:385)
+	at org.jboss.weld.bootstrap.Validator.validateDeployment(Validator.java:371)
+	at org.jboss.weld.bootstrap.WeldBootstrap.validateBeans(WeldBootstrap.java:390)
+	at org.glassfish.weld.WeldDeployer.event(WeldDeployer.java:189)
+	at org.glassfish.kernel.event.EventsImpl.send(EventsImpl.java:128)
+	at org.glassfish.internal.data.ApplicationInfo.start(ApplicationInfo.java:298)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:461)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:359)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:369)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1080)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:95)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1260)
+	at org.glassfish.deployment.autodeploy.AutoOperation.run(AutoOperation.java:145)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deploy(AutoDeployer.java:577)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deployAll(AutoDeployer.java:463)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:395)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:380)
+	at org.glassfish.deployment.autodeploy.AutoDeployService$1.run(AutoDeployService.java:213)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+|#]
+
+[#|2011-01-07T00:28:34.139-0700|WARNING|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Autodeploy failed : /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war.|#]
+
+[#|2011-01-07T00:28:35.407-0700|INFO|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Selecting file /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war for autodeployment.|#]
+
+[#|2011-01-07T00:28:35.570-0700|INFO|glassfish3.1|org.hibernate.validator.engine.resolver.DefaultTraversableResolver|_ThreadID=19;_ThreadName=Thread-1;|Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.|#]
+
+[#|2011-01-07T00:28:35.574-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:35.575-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:35.575-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:36.020-0700|INFO|glassfish3.1|javax.enterprise.system.container.web.com.sun.enterprise.web|_ThreadID=60;_ThreadName=Thread-1;|WEB0671: Loading application [cdi-extension-loading] at [/cdi-extension-loading]|#]
+
+[#|2011-01-07T00:28:36.024-0700|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app|#]
+
+[#|2011-01-07T00:28:36.047-0700|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app : WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+org.jboss.weld.exceptions.DeploymentException: WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+	at org.jboss.weld.bootstrap.Validator.validateInjectionPoint(Validator.java:309)
+	at org.jboss.weld.bootstrap.Validator.validateBean(Validator.java:139)
+	at org.jboss.weld.bootstrap.Validator.validateRIBean(Validator.java:162)
+	at org.jboss.weld.bootstrap.Validator.validateBeans(Validator.java:385)
+	at org.jboss.weld.bootstrap.Validator.validateDeployment(Validator.java:371)
+	at org.jboss.weld.bootstrap.WeldBootstrap.validateBeans(WeldBootstrap.java:390)
+	at org.glassfish.weld.WeldDeployer.event(WeldDeployer.java:189)
+	at org.glassfish.kernel.event.EventsImpl.send(EventsImpl.java:128)
+	at org.glassfish.internal.data.ApplicationInfo.start(ApplicationInfo.java:298)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:461)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:359)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:369)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1080)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:95)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1260)
+	at org.glassfish.deployment.autodeploy.AutoOperation.run(AutoOperation.java:145)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deploy(AutoDeployer.java:577)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deployAll(AutoDeployer.java:463)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:395)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:380)
+	at org.glassfish.deployment.autodeploy.AutoDeployService$1.run(AutoDeployService.java:213)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+|#]
+
+[#|2011-01-07T00:28:36.054-0700|WARNING|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Autodeploy failed : /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war.|#]
+
+[#|2011-01-07T00:28:37.407-0700|INFO|glassfish3.1|javax.enterprise.system.tools.deployment.org.glassfish.deployment.common|_ThreadID=60;_ThreadName=Thread-1;|[AutoDeploy] Selecting file /Users/jporter/servers/glassfish31/glassfish/domains/domain1/autodeploy/cdi-extension-loading.war for autodeployment.|#]
+
+[#|2011-01-07T00:28:37.590-0700|INFO|glassfish3.1|org.hibernate.validator.engine.resolver.DefaultTraversableResolver|_ThreadID=19;_ThreadName=Thread-1;|Instantiated an instance of org.hibernate.validator.engine.resolver.JPATraversableResolver.|#]
+
+[#|2011-01-07T00:28:37.592-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:37.592-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:37.592-0700|INFO|glassfish3.1|javax.enterprise.system.std.com.sun.enterprise.server.logging|_ThreadID=60;_ThreadName=Thread-1;|Adding singleton for WebappClassLoader (delegate=true; repositories=WEB-INF/classes/)|#]
+
+[#|2011-01-07T00:28:37.842-0700|INFO|glassfish3.1|javax.enterprise.system.container.web.com.sun.enterprise.web|_ThreadID=60;_ThreadName=Thread-1;|WEB0671: Loading application [cdi-extension-loading] at [/cdi-extension-loading]|#]
+
+[#|2011-01-07T00:28:37.845-0700|SEVERE|glassfish3.1|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app|#]
+
+[#|2011-01-07T00:28:37.865-0700|SEVERE|glassfish3.1|javax.enterprise.system.tools.admin.org.glassfish.deployment.admin|_ThreadID=60;_ThreadName=Thread-1;|Exception while loading the app : WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+org.jboss.weld.exceptions.DeploymentException: WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]]
+	at org.jboss.weld.bootstrap.Validator.validateInjectionPoint(Validator.java:309)
+	at org.jboss.weld.bootstrap.Validator.validateBean(Validator.java:139)
+	at org.jboss.weld.bootstrap.Validator.validateRIBean(Validator.java:162)
+	at org.jboss.weld.bootstrap.Validator.validateBeans(Validator.java:385)
+	at org.jboss.weld.bootstrap.Validator.validateDeployment(Validator.java:371)
+	at org.jboss.weld.bootstrap.WeldBootstrap.validateBeans(WeldBootstrap.java:390)
+	at org.glassfish.weld.WeldDeployer.event(WeldDeployer.java:189)
+	at org.glassfish.kernel.event.EventsImpl.send(EventsImpl.java:128)
+	at org.glassfish.internal.data.ApplicationInfo.start(ApplicationInfo.java:298)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:461)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:240)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:370)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$1.execute(CommandRunnerImpl.java:359)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:369)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1080)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1200(CommandRunnerImpl.java:95)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1260)
+	at org.glassfish.deployment.autodeploy.AutoOperation.run(AutoOperation.java:145)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deploy(AutoDeployer.java:577)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.deployAll(AutoDeployer.java:463)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:395)
+	at org.glassfish.deployment.autodeploy.AutoDeployer.run(AutoDeployer.java:380)
+	at org.glassfish.deployment.autodeploy.AutoDeployService$1.run(AutoDeployService.java:213)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+|#]
+
