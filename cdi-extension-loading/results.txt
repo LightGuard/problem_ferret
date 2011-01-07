@@ -1,0 +1,26 @@
+Glassfish 3.0.1
+------------------------------
+Without beans.xml in the jar - org.jboss.weld.exceptions.AmbiguousResolutionException: WELD-001318 Cannot resolve an ambiguous dependency between [org.jboss.weld.bean-org.lightguard.cdi.extension.bean.HelloService-ManagedBean-org.lightguard.cdi.extension.bean.HelloService{}, org.jboss.weld.bean-org.lightguard.cdi.extension.bean.HelloService-ManagedBean-class org.lightguard.cdi.extension.bean.HelloService
+
+With beans.xml in the jar - org.jboss.weld.exceptions.AmbiguousResolutionException: WELD-001318 Cannot resolve an ambiguous dependency between [org.jboss.weld.bean-/Users/jporter/servers/glassfishv3/glassfish/domains/domain1/applications/cdi-extension-loading/-ManagedBean-org.lightguard.cdi.extension.bean.HelloService{}, org.jboss.weld.bean-/Users/jporter/servers/glassfishv3/glassfish/domains/domain1/applications/cdi-extension-loading/-ManagedBean-class org.lightguard.cdi.extension.bean.HelloService]
+
+With beans.xml & removing the META-INF/services/javax.enterprise.inject.spi.Extension - Works perfectly
+
+Glassfish 3.1
+------------------------------
+Does not contain the fix from http://java.net/jira/browse/GLASSFISH-14808
+
+With or without beans.xml in the jar - Exception while loading the app : WELD-001409 Ambiguous dependencies for type [HelloService] with qualifiers [@Default] at injection point [[field] @Inject private org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService]. Possible dependencies [[Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default], Managed Bean [class org.lightguard.cdi.extension.bean.HelloService] with qualifiers [@Any @Default]]
+
+With beans.xml & removing the META-INF/services/javax.enterprise.inject.spi.Extension - Works perfectly
+
+Resin 4.0.13
+------------------------------
+Without beans.xml in the jar - javax.enterprise.inject.UnsatisfiedResolutionException: org.lightguard.cdi.extension.webapp.servlet.HelloServlet.helloService: Can't find a bean for 'class org.lightguard.cdi.extension.bean.HelloService' because no beans implementing that class have been registered with the injection manager InjectManager[web-app:production/webapp/default/cdi-extension-loading].'
+
+With beans.xml in the jar - Works perfectly
+
+JBoss 6.0.0.Final
+------------------------------
+Works perfectly as is
+
